@@ -11,9 +11,7 @@ body, html {
     font-size: 16px;
     line-height: 1.5;
     color: #191445;
-    background:
-        radial-gradient(ellipse 80% 50% at 50% -10%, rgba(254, 208, 7, 0.18), transparent 55%),
-        linear-gradient(180deg, #eef1f6 0%, #f7f8fb 45%, #e8ecf3 100%);
+    background: #ffffff;
 }
 
 body {
