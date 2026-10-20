@@ -16,9 +16,17 @@ body, html {
 
 body {
     display: flex;
-    align-items: flex-start;
     justify-content: center;
-    padding: 48px 16px 64px;
+    padding: 48px 16px 40px;
+}
+
+.page {
+    width: 100%;
+    max-width: 960px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 48px;
 }
 
 .form-container {
@@ -53,9 +61,81 @@ body {
     width: 100%;
 }
 
+.site-footer {
+    width: 100%;
+    text-align: center;
+    padding: 8px 12px 24px;
+}
+
+.footer-heading {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #2b2b2b;
+    margin-bottom: 28px;
+}
+
+.carrier-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 28px 40px;
+    margin-bottom: 36px;
+}
+
+.carrier-logo {
+    display: block;
+    height: 36px;
+    width: auto;
+    max-width: 140px;
+    object-fit: contain;
+}
+
+.footer-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 6px 8px;
+    margin-bottom: 14px;
+    font-size: 0.8125rem;
+}
+
+.footer-nav a {
+    color: #4aa3d9;
+    text-decoration: none;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+.footer-sep {
+    color: #4aa3d9;
+    user-select: none;
+}
+
+.footer-address {
+    font-size: 0.8125rem;
+    color: #6b7280;
+    margin-bottom: 18px;
+}
+
+.footer-disclaimer {
+    max-width: 760px;
+    margin: 0 auto;
+    font-size: 0.75rem;
+    line-height: 1.55;
+    color: #9ca3af;
+}
+
 @media (max-width: 600px) {
     body {
-        padding: 24px 12px 40px;
+        padding: 24px 12px 32px;
+    }
+
+    .page {
+        gap: 36px;
     }
 
     .form-container {
@@ -70,5 +150,20 @@ body {
 
     .brand-logo {
         width: min(200px, 80%);
+    }
+
+    .carrier-logos {
+        gap: 20px 24px;
+        margin-bottom: 28px;
+    }
+
+    .carrier-logo {
+        height: 28px;
+        max-width: 110px;
+    }
+
+    .footer-nav {
+        gap: 4px 6px;
+        font-size: 0.75rem;
     }
 }
