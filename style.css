@@ -5,33 +5,72 @@
 }
 
 body, html {
-    height: 100%;
+    min-height: 100%;
     width: 100%;
     font-family: 'Inter', sans-serif;
     font-size: 16px;
     line-height: 1.5;
-    color: #1e2a38;
-    background-color: #f4f6f9;
+    color: #191445;
+    background:
+        radial-gradient(ellipse 80% 50% at 50% -10%, rgba(254, 208, 7, 0.18), transparent 55%),
+        linear-gradient(180deg, #eef1f6 0%, #f7f8fb 45%, #e8ecf3 100%);
+}
+
+body {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 48px 16px 64px;
 }
 
 .form-container {
-    max-width: 700px;
-    margin: 40px auto;
+    width: 100%;
+    max-width: 640px;
+    margin: 0 auto;
     background: #ffffff;
-    padding: 40px;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    padding: 36px 40px 40px;
+    border-radius: 16px;
+    border: 1px solid rgba(25, 20, 69, 0.06);
+    box-shadow:
+        0 4px 6px rgba(25, 20, 69, 0.04),
+        0 18px 40px rgba(25, 20, 69, 0.08);
 }
 
 .brand-header {
-    text-align: center;
-    margin-bottom: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(25, 20, 69, 0.08);
 }
 
-.brand-name {
-    font-size: 1.75rem;
-    font-weight: 700;
-    color: #1e2a38;
-    letter-spacing: -0.02em;
-    line-height: 1.2;
+.brand-logo {
+    display: block;
+    width: min(237px, 72%);
+    height: auto;
+}
+
+#oe-wrap {
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 24px 12px 40px;
+    }
+
+    .form-container {
+        padding: 24px 20px 28px;
+        border-radius: 12px;
+    }
+
+    .brand-header {
+        margin-bottom: 18px;
+        padding-bottom: 16px;
+    }
+
+    .brand-logo {
+        width: min(200px, 80%);
+    }
 }
