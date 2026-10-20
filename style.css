@@ -4,8 +4,11 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+}
+
 body, html {
-    min-height: 100%;
     width: 100%;
     font-family: 'Inter', sans-serif;
     font-size: 16px;
@@ -15,9 +18,11 @@ body, html {
 }
 
 body {
+    min-height: 100%;
+    min-height: 100dvh;
     display: flex;
     justify-content: center;
-    padding: 48px 16px 40px;
+    padding: 48px 16px 24px;
 }
 
 .page {
@@ -26,7 +31,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 48px;
+    align-self: stretch;
 }
 
 .form-container {
@@ -63,8 +68,9 @@ body {
 
 .site-footer {
     width: 100%;
+    margin-top: auto;
     text-align: center;
-    padding: 8px 12px 24px;
+    padding: 48px 12px 24px;
 }
 
 .footer-heading {
@@ -131,11 +137,7 @@ body {
 
 @media (max-width: 600px) {
     body {
-        padding: 24px 12px 32px;
-    }
-
-    .page {
-        gap: 36px;
+        padding: 24px 12px 20px;
     }
 
     .form-container {
@@ -150,6 +152,10 @@ body {
 
     .brand-logo {
         width: min(200px, 80%);
+    }
+
+    .site-footer {
+        padding-top: 36px;
     }
 
     .carrier-logos {
